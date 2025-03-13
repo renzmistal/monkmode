@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Monk Mode</title>
+  <link rel="stylesheet" href="./styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&family=Roboto+Mono:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>MONK MODE</h1>
+      <div class="quote-container">
+        <p id="quote">"Focus on being productive instead of busy."</p>
+        <p id="author">- Tim Ferriss</p>
+      </div>
+    </header>
+
+    <main>
+      <section class="timer-section">
+        <div class="timer-display">
+          <h2 id="timer-display">25:00</h2>
+          <div class="timer-status">
+            <span id="status-text">ready</span>
+          </div>
+        </div>
+        <div class="timer-controls">
+          <div class="duration-controls">
+            <button id="timer-30" class="timer-btn">30 min</button>
+            <button id="timer-60" class="timer-btn">60 min</button>
+          </div>
+          <div class="action-controls">
+            <button id="start-btn" class="action-btn">Start</button>
+            <button id="reset-btn" class="action-btn">Reset</button>
+          </div>
+        </div>
+      </section>
+
+      <section class="tasks-section">
+        <h2>Top 3 Tasks <span class="info-icon" title="Limiting to 3 tasks helps maintain focus on what truly matters">ⓘ</span></h2>
+        <div class="tasks-container">
+          <div class="task" id="task1-container">
+            <input type="checkbox" id="task1-check">
+            <input type="text" id="task1-text" placeholder="Primary task...">
+            <button class="lock-btn" id="task1-lock"><i class="fas fa-lock-open"></i></button>
+          </div>
+          <div class="task" id="task2-container">
+            <input type="checkbox" id="task2-check">
+            <input type="text" id="task2-text" placeholder="Secondary task...">
+            <button class="lock-btn" id="task2-lock"><i class="fas fa-lock-open"></i></button>
+          </div>
+          <div class="task" id="task3-container">
+            <input type="checkbox" id="task3-check">
+            <input type="text" id="task3-text" placeholder="Tertiary task...">
+            <button class="lock-btn" id="task3-lock"><i class="fas fa-lock-open"></i></button>
+          </div>
+        </div>
+        <div class="task-info">
+          <p>Why only three tasks? Limiting your focus to just three key tasks helps combat decision fatigue, improves concentration, and increases the likelihood of completion. Quality over quantity.</p>
+          <p>Input your task and click the lock icon to commit to it. Once locked, tasks cannot be edited, ensuring you must complete what you've committed to. Check the box when a task is done.</p>
+          <p>Tasks will automatically refresh after 24 hours based on your computer's clock, giving you a fresh start each day.</p>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="music-player">
+        <div class="music-info">
+          <span id="track-name">Lo-Fi Focus</span>
+        </div>
+        <div class="player-controls">
+          <button id="prev-track" class="player-btn"><i class="fas fa-step-backward"></i></button>
+          <button id="play-pause" class="player-btn"><i class="fas fa-play"></i></button>
+          <button id="next-track" class="player-btn"><i class="fas fa-step-forward"></i></button>
+          <div class="volume-control">
+            <i class="fas fa-volume-up"></i>
+            <input type="range" id="volume" min="0" max="100" value="70">
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
+
+  <script type="module" src="./js/main.js"></script>
+</body>
+</html>
